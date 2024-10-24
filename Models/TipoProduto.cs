@@ -13,5 +13,9 @@ namespace SunTech.Models
         [Column("NomeTipoProduto")]
         [Display(Name = "Tipo do Produto")]
         public string NomeTipoProduto { get; set; } = string.Empty;
+
+        [Column("FotoTipoProduto")]
+        [Display(Name = "Foto Tipo do Produto")]
+        public string FotoTipoProduto { get; set; } = string.Empty;
     }
 }
