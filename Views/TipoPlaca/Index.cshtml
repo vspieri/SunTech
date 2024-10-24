@@ -1,0 +1,35 @@
+﻿@model IEnumerable<SunTech.Models.TipoPlaca>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Tipo Placa</h1>
+
+<p>
+    <a asp-action="Create" class="btn1">Cadastrar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeTipoPlaca)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeTipoPlaca)
+            </td>
+            <td>
+                <a class="btn5" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a class="btn5" asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a class="btn5" asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

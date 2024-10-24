@@ -1,0 +1,137 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #DEDEDE;
+}
+.navbar {
+    background-color: #263470 !important;
+}
+
+footer {
+    background-color: #263470 !important;
+}
+.btn1 {
+    background-color: #263470;
+    color: white;
+    padding: 5px;
+    border: 2px solid #263470;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btn1:hover {
+    color: #263470;
+    background-color: #F8C728;
+    text-decoration: none;
+    border: 2px solid #F8C728;
+    padding: 5px;
+    border-radius: 5px
+}
+.btn2 {
+    color: #263470;
+    padding: 5px;
+    border: 2px solid #F8C728;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: transparent;
+}
+.btn2:hover {
+    color: #263470;
+    border: 2px solid #F8C728;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #F8C728
+}
+.btn3 {
+    background-color: #263470;
+    color: white;
+    border: 2px solid #263470;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    width: 56px;
+}
+.btn3:hover {
+    background-color: #F8C728;
+    color: #263470;
+    border: 2px solid #F8C728;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+.btn5 {
+    color: #263470;
+    padding: 6px;
+    border: 2px solid #263470;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btn5:hover {
+    color: #263470;
+    padding: 5px;
+    border: 2px solid #F8C728;
+    text-decoration: none;
+    border-radius: 5px
+}
+.btn6:hover {
+    background-color: #F8C728;
+    color: #263470;
+    border: 2px solid #F8C728;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    width: 60px;
+}
+.btn6 {
+    color: white;
+    background-color: #263470;
+    text-decoration: none;
+    border: 1px solid #263470;
+    padding: 4px;
+    border-radius: 5px
+}
+.btn7 {
+    background-color: #263470;
+    color: white;
+    border: 2px solid #263470;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    width:56px;
+}
+.btn7:hover {
+    background-color: #F8C728;
+    color: #263470;
+    border: 2px solid #F8C728;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+.logo img {
+    width: 100px;
+    height: 70px;
+}

@@ -1,0 +1,36 @@
+﻿@model SunTech.Models.Placa
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <h4>Placa</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NomePlaca)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NomePlaca)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TipoPlaca)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TipoPlaca.NomeTipoPlaca)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TamanhoPlaca)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TamanhoPlaca)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn3" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
+    <a class="btn2" asp-action="Index">Voltar</a>
+</div>

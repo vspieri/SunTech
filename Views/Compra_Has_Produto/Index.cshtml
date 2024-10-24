@@ -1,0 +1,59 @@
+﻿@model IEnumerable<SunTech.Models.Compra_Has_Produto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Compra Has Produto</h1>
+
+<p>
+    <a class="btn1" asp-action="Create">Cadastrar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Compra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Produto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QuantidadeProduto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorUnitario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorTotalProduto)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Compra.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Produto.NomeProduto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QuantidadeProduto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorUnitario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorTotalProduto)
+            </td>
+            <td>
+                <a class="btn5" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a class="btn5" asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a class="btn5" asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

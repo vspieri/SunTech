@@ -1,0 +1,24 @@
+﻿@model SunTech.Models.TipoProduto
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <h4>Tipo Produto</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NomeTipoProduto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NomeTipoProduto)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn3" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
+    <a class="btn2" asp-action="Index">Voltar</a>
+</div>

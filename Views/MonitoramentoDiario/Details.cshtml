@@ -1,0 +1,35 @@
+﻿@model SunTech.Models.MonitoramentoDiario
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataDia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataDia)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MediaDia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MediaDia)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Monitoramento)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Monitoramento.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn3" asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
+    <a class="btn2" asp-action="Index">Voltar</a>
+</div>

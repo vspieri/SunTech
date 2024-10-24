@@ -1,0 +1,41 @@
+﻿@model SunTech.Models.MonitoramentoMensal
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Cadastro</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Mes" class="control-label"></label>
+                <input asp-for="Mes" class="form-control" />
+                <span asp-validation-for="Mes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MediaMensal" class="control-label"></label>
+                <input asp-for="MediaMensal" class="form-control" />
+                <span asp-validation-for="MediaMensal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MonitoramentoId" class="control-label"></label>
+                <select asp-for="MonitoramentoId" class ="form-control" asp-items="ViewBag.MonitoramentoId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Criar" class="btn btn-primary btn7" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn2" asp-action="Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

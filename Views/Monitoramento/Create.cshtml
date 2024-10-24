@@ -1,0 +1,49 @@
+﻿@model SunTech.Models.Monitoramento
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Cadastro</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PlacaId" class="control-label">Placa</label>
+                <select asp-for="PlacaId" class ="form-control" asp-items="ViewBag.PlacaId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="QuantidadePlaca" class="control-label">Quantidade</label>
+                <input asp-for="QuantidadePlaca" class="form-control" />
+                <span asp-validation-for="QuantidadePlaca" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClienteId" class="control-label">Cliente</label>
+                <select asp-for="ClienteId" class ="form-control" asp-items="ViewBag.ClienteId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataInstalacao" class="control-label">Instalação</label>
+                <input asp-for="DataInstalacao" class="form-control" />
+                <span asp-validation-for="DataInstalacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataUltimaManutencao" class="control-label">Última Instalação</label>
+                <input asp-for="DataUltimaManutencao" class="form-control" />
+                <span asp-validation-for="DataUltimaManutencao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Criar" class="btn btn-primary btn7" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn2" asp-action="Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

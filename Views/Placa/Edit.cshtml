@@ -1,0 +1,42 @@
+﻿@model SunTech.Models.Placa
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editar</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="NomePlaca" class="control-label">Placa</label>
+                <input asp-for="NomePlaca" class="form-control" />
+                <span asp-validation-for="NomePlaca" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TipoPlacaId" class="control-label">Tipo</label>
+                <select asp-for="TipoPlacaId" class="form-control" asp-items="ViewBag.TipoPlacaId"></select>
+                <span asp-validation-for="TipoPlacaId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TamanhoPlaca" class="control-label">Tamanho</label>
+                <input asp-for="TamanhoPlaca" class="form-control" />
+                <span asp-validation-for="TamanhoPlaca" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary btn3" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn2" asp-action="Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
