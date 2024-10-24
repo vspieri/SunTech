@@ -55,7 +55,7 @@ namespace SunTech.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,NomeTipoProduto")] TipoProduto tipoProduto)
+        public async Task<IActionResult> Create([Bind("Id,NomeTipoProduto, FotoTipoProduto")] TipoProduto tipoProduto)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +87,7 @@ namespace SunTech.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,NomeTipoProduto")] TipoProduto tipoProduto)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,NomeTipoProduto, FotoTipoProduto")] TipoProduto tipoProduto)
         {
             if (id != tipoProduto.Id)
             {

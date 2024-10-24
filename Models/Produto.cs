@@ -15,6 +15,10 @@ namespace SunTech.Models
         [Display(Name = "Produto")]
         public string NomeProduto { get; set; } = string.Empty;
 
+        [Column("FotoProduto")]
+        [Display(Name = "Foto")]
+        public string FotoProduto { get; set; } = string.Empty;
+
         [ForeignKey("TipoProdutoId")]
         public int TipoProdutoId { get; set; }
         public TipoProduto? TipoProduto { get; set; }

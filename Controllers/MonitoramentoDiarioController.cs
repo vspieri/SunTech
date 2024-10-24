@@ -38,11 +38,7 @@ namespace SunTech.Controllers
                 return View(destino);
             }
         }
-        public async Task<IActionResult> Index()
-        {
-            var contexto = _context.MonitoramentoDiario.Include(m => m.Monitoramento);
-            return View(await contexto.ToListAsync());
-        }
+
 
         // GET: MonitoramentoDiario/Details/5
         public async Task<IActionResult> Details(int? id)
