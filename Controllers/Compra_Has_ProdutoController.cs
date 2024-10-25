@@ -86,7 +86,7 @@ namespace SunTech.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["CompraId"] = new SelectList(_context.Compra, "Id", "Id", compra_Has_Produto.CompraId);
-            ViewData["ProdutoId"] = new SelectList(_context.Produto, "Id", "Id", compra_Has_Produto.ProdutoId);
+            ViewData["ProdutoId"] = new SelectList(_context.Produto, "Id", "NomeProduto", compra_Has_Produto.ProdutoId);
             return View(compra_Has_Produto);
         }
 
@@ -104,7 +104,7 @@ namespace SunTech.Controllers
                 return NotFound();
             }
             ViewData["CompraId"] = new SelectList(_context.Compra, "Id", "Id", compra_Has_Produto.CompraId);
-            ViewData["ProdutoId"] = new SelectList(_context.Produto, "Id", "Id", compra_Has_Produto.ProdutoId);
+            ViewData["ProdutoId"] = new SelectList(_context.Produto, "Id", "NomeProduto", compra_Has_Produto.ProdutoId);
             return View(compra_Has_Produto);
         }
 

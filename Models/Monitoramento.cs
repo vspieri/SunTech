@@ -27,7 +27,7 @@ namespace SunTech.Models
         public DateTime DataInstalacao { get; set; }
 
         [Column("DataUltimaManutencao")]
-        [Display(Name = "Última Manutenção")]
+        [Display(Name = "Próxima Manutenção")]
         public DateTime DataUltimaManutencao { get; set; }
     }
 }
