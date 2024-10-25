@@ -26,16 +26,16 @@ namespace SunTech.Controllers
             {
                 return _context.MonitoramentoDiario != null ?
                           View(await _context.MonitoramentoDiario.ToListAsync()) :
-                          Problem("Entity set 'Contexto.MonitoramentoDiario'  is null.");
+                          Problem("Entity set 'Contexto.MonitoramentoDiario' is null.");
             }
             else
             {
-                var destino =
+                var mediadiaria =
                     _context.MonitoramentoDiario
-                    .Where(x => x.DataDia.Equals(pesquisa))
-                    .OrderBy(x => x.DataDia);
+                    .Where(x => x.Monitoramento.Placa.NomePlaca.Contains(pesquisa))
+                    .OrderBy(x => x.Monitoramento.PlacaId);
 
-                return View(destino);
+                return View(mediadiaria);
             }
         }
 

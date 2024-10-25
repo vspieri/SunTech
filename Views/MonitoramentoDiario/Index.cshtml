@@ -12,15 +12,15 @@
 <table class="table">
     <thead>
 
-                <div>
+        <div>
             @using (Html.BeginForm("Index", "MonitoramentoDiario", FormMethod.Get))
             {
                 <p>
-                    Digite aqui sua pesquisa: @Html.TextBox("pesquisa")
+                    Pesquise o id da placa: @Html.TextBox("pesquisa")
                     <input class="btn btn-primary btn2" type="submit" value="Pesquisar" />
                 </p>
             }
-</div>
+        </div>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.DataDia)

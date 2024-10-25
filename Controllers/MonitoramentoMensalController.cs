@@ -19,10 +19,23 @@ namespace SunTech.Controllers
         }
 
         // GET: MonitoramentoMensal
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string pesquisa)
         {
-            var contexto = _context.MonitoramentoMensal.Include(m => m.Monitoramento);
-            return View(await contexto.ToListAsync());
+            if (pesquisa == null)
+            {
+                return _context.MonitoramentoMensal != null ?
+                          View(await _context.MonitoramentoMensal.ToListAsync()) :
+                          Problem("Entity set 'Contexto.MonitoramentoMensal'  is null.");
+            }
+            else
+            {
+                var mediamensal =
+                    _context.MonitoramentoMensal
+                    .Where(x => x.Monitoramento.Placa.NomePlaca.Contains(pesquisa))
+                    .OrderBy(x => x.Monitoramento.PlacaId);
+
+                return View(mediamensal);
+            }
         }
 
         // GET: MonitoramentoMensal/Details/5

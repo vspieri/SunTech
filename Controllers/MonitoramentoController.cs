@@ -29,12 +29,12 @@ namespace SunTech.Controllers
             }
             else
             {
-                var destino =
+                var media =
                     _context.Monitoramento
-                    .Where(x => x.ClienteId.Equals( pesquisa ) )
-                    .OrderBy(x => x.Id);
+                    .Where(x => x.Cliente.NomeCliente.Contains( pesquisa ) )
+                    .OrderBy(x => x.Cliente);
 
-                return View(destino);
+                return View(media);
             }
         }
 
